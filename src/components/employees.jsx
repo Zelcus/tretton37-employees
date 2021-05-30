@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
-export const Employees = () => {
-    let [listOfEmployees, setListOfEmployees] = useState([]);
+import { Filter } from "./filter";
 
+const emplyees = [[{}]];
+export const Employees = () => {
+    const [listOfEmployees, setListOfEmployees] = useState([{}]);
+
+    const [sortData, setSortData] = useState(["office"]);
     useEffect(() => {
         fetch("https://api.1337co.de/v3/employees", {
             method: "GET",
@@ -13,13 +17,34 @@ export const Employees = () => {
         }).then((response) =>
             response.json().then((data) => {
                 setListOfEmployees(data);
-                console.log(listOfEmployees);
             })
         );
-    }, []);
+        sortArray(sortData);
+    }, [sortData]);
+
+    const sortArray = (type) => {
+        const types = {
+            name: "name",
+            office: "office",
+        };
+        const sortProp = types[type];
+        const sorted = [...emplyees].sort((a, b) => b.office - a.office);
+
+        setListOfEmployees(sorted);
+        console.log(emplyees);
+        console.log(listOfEmployees);
+    };
 
     return (
         <div>
+            <div className="filter-container"></div>
+            <div className="sorting-container">
+                <select onChange={(e) => setSortData(e.target.value)}>
+                    <option value="name">Name</option>
+                    <option value="office">Office</option>
+                </select>
+            </div>
+
             {listOfEmployees.map((employee, index) => (
                 <li key={index}>
                     <span>{employee.name}</span>
