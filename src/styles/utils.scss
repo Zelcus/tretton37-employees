@@ -1,0 +1,39 @@
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+h1 {
+    text-align: center;
+}
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    margin-bottom: $smallSpacing;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:focus-visible {
+        outline: none;
+    }
+}
+.btn {
+    padding: $smallSpacing $mediumSpacing;
+    font-size: $mainFontSize;
+    background: none;
+    border: 3px solid $mainBlue;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+        background: $mainBlue;
+        color: white;
+        cursor: pointer;
+    }
+}
