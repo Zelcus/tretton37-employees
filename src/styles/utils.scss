@@ -36,4 +36,8 @@ select {
         color: white;
         cursor: pointer;
     }
+    &:focus {
+        background: $mainBlue;
+        color: white;
+    }
 }

@@ -3,6 +3,7 @@ import { Filter } from "./filter";
 
 export const Employees = () => {
     const [listOfEmployees, setListOfEmployees] = useState([]);
+    let filterOfficeList = [];
 
     useEffect(() => {
         fetch("https://api.1337co.de/v3/employees", {
@@ -38,6 +39,7 @@ export const Employees = () => {
 
         console.log(listOfEmployees);
     };
+    filterOfficeList = [...new Set(listOfEmployees.map((item) => item.office))];
 
     return (
         <>
@@ -56,14 +58,33 @@ export const Employees = () => {
                 >
                     Order by name
                 </button>
+                <select className="select-btn btn">
+                    {filterOfficeList.map((employee, index) => (
+                        <option>{employee}</option>
+                    ))}
+                    ;
+                </select>
             </div>
             <div className="employee-container container">
                 {listOfEmployees.map((employee, index) => (
                     <li className="employee-card" key={index}>
-                        <span className="employee-name">{employee.name}</span>
-                        <span className="employee-office">
-                            Office: {employee.office}
-                        </span>
+                        <div className="employee-content">
+                            <div className="employee-left-content">
+                                <span className="employee-name">
+                                    {employee.name}
+                                </span>
+                                <span className="employee-office">
+                                    Office: {employee.office}
+                                </span>
+                                <div className="employee-so-me"></div>
+                            </div>
+                            <div className="employee-image-container">
+                                <img
+                                    className="employee-image"
+                                    src={employee.imagePortraitUrl}
+                                ></img>
+                            </div>
+                        </div>
                     </li>
                 ))}
             </div>
