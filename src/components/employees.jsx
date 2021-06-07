@@ -3,7 +3,6 @@ import { Filter } from "./filter";
 
 export const Employees = () => {
     const [listOfEmployees, setListOfEmployees] = useState([]);
-    let filterOfficeList = [];
 
     useEffect(() => {
         fetch("https://api.1337co.de/v3/employees", {
@@ -39,7 +38,6 @@ export const Employees = () => {
 
         console.log(listOfEmployees);
     };
-    filterOfficeList = [...new Set(listOfEmployees.map((item) => item.office))];
 
     return (
         <>
@@ -58,12 +56,6 @@ export const Employees = () => {
                 >
                     Order by name
                 </button>
-                <select className="select-btn btn">
-                    {filterOfficeList.map((employee, index) => (
-                        <option>{employee}</option>
-                    ))}
-                    ;
-                </select>
             </div>
             <div className="employee-container container">
                 {listOfEmployees.map((employee, index) => (

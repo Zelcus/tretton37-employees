@@ -37,6 +37,10 @@
         flex-direction: column;
         font-size: $mainFontSize;
         padding: $smallSpacing;
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+            display: block;
+        }
 
         @media (min-width: 992px) {
             flex-basis: calc(33% - #{$largeSpacing});
