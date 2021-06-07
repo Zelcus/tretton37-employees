@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Filter } from "./filter";
+
 export const Employees = () => {
-    let [listOfEmployees, setListOfEmployees] = useState([]);
+    const [listOfEmployees, setListOfEmployees] = useState([]);
+    let filterOfficeList = [];
 
     useEffect(() => {
         fetch("https://api.1337co.de/v3/employees", {
@@ -13,19 +16,78 @@ export const Employees = () => {
         }).then((response) =>
             response.json().then((data) => {
                 setListOfEmployees(data);
-                console.log(listOfEmployees);
             })
         );
     }, []);
 
+    const sortArray = (type) => {
+        const types = {
+            office: "office",
+            name: "name",
+        };
+        const sortProperty = types[type];
+        //Since there was a person without office I had to check for null ref and remove it from the list
+        const tempEmployeeList = listOfEmployees.filter(
+            (item) => item[sortProperty] != null
+        );
+
+        setListOfEmployees(
+            tempEmployeeList.sort((a, b) =>
+                a[sortProperty].localeCompare(b[sortProperty])
+            )
+        );
+
+        console.log(listOfEmployees);
+    };
+    filterOfficeList = [...new Set(listOfEmployees.map((item) => item.office))];
+
     return (
-        <div>
-            {listOfEmployees.map((employee, index) => (
-                <li key={index}>
-                    <span>{employee.name}</span>
-                    <span>{employee.office}</span>
-                </li>
-            ))}
-        </div>
+        <>
+            <div className="filter-container container">
+                <button
+                    className="select-btn btn"
+                    value="office"
+                    onClick={(e) => sortArray(e.target.value)}
+                >
+                    Order by office
+                </button>
+                <button
+                    className="select-btn btn"
+                    value="name"
+                    onClick={(e) => sortArray(e.target.value)}
+                >
+                    Order by name
+                </button>
+                <select className="select-btn btn">
+                    {filterOfficeList.map((employee, index) => (
+                        <option>{employee}</option>
+                    ))}
+                    ;
+                </select>
+            </div>
+            <div className="employee-container container">
+                {listOfEmployees.map((employee, index) => (
+                    <li className="employee-card" key={index}>
+                        <div className="employee-content">
+                            <div className="employee-left-content">
+                                <span className="employee-name">
+                                    {employee.name}
+                                </span>
+                                <span className="employee-office">
+                                    Office: {employee.office}
+                                </span>
+                                <div className="employee-so-me"></div>
+                            </div>
+                            <div className="employee-image-container">
+                                <img
+                                    className="employee-image"
+                                    src={employee.imagePortraitUrl}
+                                ></img>
+                            </div>
+                        </div>
+                    </li>
+                ))}
+            </div>
+        </>
     );
 };
