@@ -1,7 +1,13 @@
+import React from "react";
+import logo from "../assets/tretton.png";
 export const Header = () => {
     return (
         <div className="hero-container container">
-            <h1 className="hero-title">The trained shinobi's of tretton37</h1>
+            <img
+                className="hero-title"
+                src={logo}
+                alt="logotype of tretton37"
+            />
         </div>
     );
 };
