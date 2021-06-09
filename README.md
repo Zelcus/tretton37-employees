@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# tretton37 code assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Author: Zacharias Eryd Berlin
+heroku URL: https://tretton37-zach.herokuapp.com/
 
-## Available Scripts
+To start localhost: npm run start
+It will run on http://localhost:3000
 
-In the project directory, you can run:
+## Project description
 
-### `npm start`
+This is a web application that displays the employees of tretton37 from an API.
+It displays their name and their assigned home-office.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In this App you can sort the employees either by office or by name.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Design Process
 
-### `npm test`
+I have decided to build the app very frontend heavy since that is what I am best at and feel most confident.
+Time was a major factor whilst coding this. I wanted to be as effective as I could and therefore went for what felt most confident for me.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app is therefore built with create-react-app. That way I could quicky get in the coding process and don't have to fiddle with a node.js server which would take more time.
 
-### `npm run build`
+I have worked with React before and it is the framework I prefer to use when creating web apps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I wanted to do the scraping solution right away since the values I get from the solution would be the core of the app. I managed to get the wanted data by scraping but I had to pass the URL through a heroku server that only temporarily got through the cors. I didn't want more time loss so I quicky reverted back to using the API instead.
