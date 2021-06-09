@@ -24,25 +24,30 @@ This is also where I decided to go with create-react-app instead of Node.js. I a
 
 I have worked with React before and it is the framework I prefer to use when creating web apps. Once you learn through vanillaJS what some of the React functions do it feels super powerful.
 
-I knew that getting the data from the API were the most crucial part of the assignment so I prioritized speed and control over anything else.
-
-When it comes to actual design I tried to maintain the already exisiting theme of tretton37. Colors, shapes etc.
-The colors were taken from https://tretton37.com/ where I inspected my way to get the correct color scheme.
+When it comes to UI and UX design I tried to maintain the already exisiting theme of tretton37. Colors, shapes etc.
+The colors were taken from https://tretton37.com/ where I inspected my way to get the correct color scheme. I decided to have the sorting button "ghosted" since I don't want them to function as CTA's.
 I'm really fond of the "rounded corner" design so I pretty much applied 4px border-radius on all my elements, it also fits well with the some of the existing images on tretton37's website.
 
 ## The user stories that I picked
 
-Fancy animations (1 pt)
-Keyboard only function (1 pt)
-Responsive design, works on
-mobile and tablets (2 pt)
-No UI framework used (such
-as Bootstrap, Ant) (1 pt)
-Screen reader functionality (1
-pt)
-Sort by name and office (1 pt)
-Available on a free public url
-(such as Azure, Heroku) (1 pt)
-Works in Chrome, Firefox,
-Edge (1 pt)
-Works in IE11 (1 pt)
+### Fancy animations (1 pt)
+
+### Keyboard only function (1 pt)
+
+### Responsive design, works on
+
+### mobile and tablets (2 pt)
+
+### No UI framework used (such
+
+### as Bootstrap, Ant) (1 pt)
+
+### Screen reader functionality (1pt)
+
+### Sort by name and office (1 pt)
+
+### Available on a free public url (such as Azure, Heroku) (1 pt)
+
+### Works in Chrome, Firefox, Edge (1 pt)
+
+### Works in IE11 (1 pt)
