@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Filter } from "./filter";
 
 export const Employees = () => {
     const [listOfEmployees, setListOfEmployees] = useState([]);
