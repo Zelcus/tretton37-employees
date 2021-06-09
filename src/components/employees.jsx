@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { Filter } from "./filter";
+import React, { useEffect, useState } from "react";
 
 export const Employees = () => {
     const [listOfEmployees, setListOfEmployees] = useState([]);
@@ -10,7 +9,7 @@ export const Employees = () => {
             headers: {
                 "Content-Type": "application/json",
                 Authorization:
-                    "api-key 14:2021-05-25:anna.vanduijvenbode@tretton37.com dc748c4c825a79236500ef21594212d0f93b12394f5a1ba01d64381e3ffdff4e",
+                    "api-key 14:2021-06-08:anna.vanduijvenbode@tretton37.com 1ea707ddede26395b754bd85289dc42172ad753ad99dcd543e5a8588df72dce5",
             },
         }).then((response) =>
             response.json().then((data) => {
@@ -35,8 +34,6 @@ export const Employees = () => {
                 a[sortProperty].localeCompare(b[sortProperty])
             )
         );
-
-        console.log(listOfEmployees);
     };
 
     return (
@@ -74,6 +71,7 @@ export const Employees = () => {
                                 <img
                                     className="employee-image"
                                     src={employee.imagePortraitUrl}
+                                    alt={"picture of " + employee.name}
                                 ></img>
                             </div>
                         </div>

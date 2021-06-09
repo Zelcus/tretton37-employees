@@ -1,15 +1,11 @@
-import logo from "./logo.svg";
 import "./styles/main.scss";
 import { Employees } from "./components/employees";
+import { Header } from "./components/header";
 
 function App() {
     return (
         <>
-            <div className="hero-container container">
-                <h1 className="hero-title">
-                    The trained shinobi's of tretton37
-                </h1>
-            </div>
+            <Header />
             <Employees />;
         </>
     );

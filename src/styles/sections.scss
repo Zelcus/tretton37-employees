@@ -1,13 +1,14 @@
 .hero-container {
     display: flex;
     justify-content: center;
+    background: $mainBlue;
+    border-bottom: 4px solid $mainGreen;
 
     .hero-title {
-        background: $mainBlue;
-        border-bottom: 4px solid $mainGreen;
         color: $mainGreen;
         padding: $smallSpacing $mediumSpacing;
         border-radius: 4px;
+        max-height: 60px;
     }
 }
 .filter-container {
