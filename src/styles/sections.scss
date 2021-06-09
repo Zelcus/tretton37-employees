@@ -16,7 +16,7 @@
     justify-content: center;
     flex-wrap: wrap;
     .select-btn {
-        margin: $smallSpacing/2 $smallSpacing;
+        margin: math.div($smallSpacing, 2) $smallSpacing;
     }
 }
 
@@ -31,7 +31,7 @@
         border-radius: 30px;
         border-bottom: 4px solid $mainGreen;
         border-radius: 4px;
-        margin: 0 $smallSpacing/2 $smallSpacing;
+        margin: 0 math.div($smallSpacing, 2) $smallSpacing;
         flex-grow: 1;
         display: flex;
         align-content: center;
