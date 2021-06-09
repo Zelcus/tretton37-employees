@@ -1,9 +1,11 @@
 # tretton37 code assignment
 
 Author: Zacharias Eryd Berlin
+
 heroku URL: https://tretton37-zach.herokuapp.com/
 
 To start localhost: npm run start
+
 It will run on http://localhost:3000
 
 ## Project description
@@ -32,17 +34,22 @@ I'm really fond of the "rounded corner" design so I pretty much applied 4px bord
 
 ## The user stories that I picked
 
-Fancy animations (1 pt)
-Keyboard only function (1 pt)
-Responsive design, works on
-mobile and tablets (2 pt)
-No UI framework used (such
-as Bootstrap, Ant) (1 pt)
-Screen reader functionality (1
-pt)
-Sort by name and office (1 pt)
-Available on a free public url
-(such as Azure, Heroku) (1 pt)
-Works in Chrome, Firefox,
-Edge (1 pt)
-Works in IE11 (1 pt)
+### Fancy animations (1 pt)
+
+### Keyboard only function (1 pt)
+
+### Responsive design, works on mobile and tablets (2 pt)
+
+### No UI framework used (suchas Bootstrap, Ant) (1 pt)
+
+### Screen reader functionality (1pt)
+
+### Sort by name and office (1 pt)
+
+### Available on a free public url (such as Azure, Heroku) (1 pt)
+
+### Works in Chrome, Firefox, Edge (1 pt)
+
+### Works in IE11 (1 pt)
+
+I chose these cause those were the ones that I felt that I could handle without any problem. A bit of a safe card perhaps but I felt this was no place to take any unnecessary risks. :)
