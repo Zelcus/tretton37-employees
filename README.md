@@ -4,9 +4,6 @@ Author: Zacharias Eryd Berlin
 
 heroku URL: https://tretton37-zach.herokuapp.com/
 
-To start localhost: npm run start
-
-It will run on http://localhost:3000
 
 ## Project description
 
@@ -53,3 +50,12 @@ I'm really fond of the "rounded corner" design so I pretty much applied 4px bord
 ### Works in IE11 (1 pt)
 
 I chose these cause those were the ones that I felt that I could handle without any problem. A bit of a safe card perhaps but I felt this was no place to take any unnecessary risks. :)
+
+## Installation guide
+```git clone``` the repo
+
+cd into the root of the project and run ```npm i``` to get all dependencies
+
+Then run the app with ```npm run start```
+
+It will run on http://localhost:3000
